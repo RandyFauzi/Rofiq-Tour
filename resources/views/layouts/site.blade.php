@@ -5,6 +5,21 @@
 <title>@yield('title', 'Rofiq Tour — Perjalanan menuju Baitullah')</title>
 <meta name="description" content="@yield('description', 'Temukan program umroh dan perjalanan plus bersama Rofiq Tour. Pilih paket, lihat jadwal, dan konsultasikan rencana perjalanan Anda.')">
 <link rel="canonical" href="{{ url()->current() }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="Rofiq Tour">
+<meta property="og:title" content="@yield('title', 'Rofiq Tour — Perjalanan menuju Baitullah')">
+<meta property="og:description" content="@yield('description', 'Temukan program umroh dan perjalanan plus bersama Rofiq Tour. Pilih paket, lihat jadwal, dan konsultasikan rencana perjalanan Anda.')">
+<meta property="og:url" content="{{ url()->current() }}">
+<meta property="og:image" content="{{ asset('images/social/rofiq-tour-preview.jpg') }}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="800">
+<meta property="og:image:alt" content="Jamaah berkain ihram di depan Kaabah, Makkah">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="@yield('title', 'Rofiq Tour — Perjalanan menuju Baitullah')">
+<meta name="twitter:description" content="@yield('description', 'Temukan program umroh dan perjalanan plus bersama Rofiq Tour. Pilih paket, lihat jadwal, dan konsultasikan rencana perjalanan Anda.')">
+<meta name="twitter:image" content="{{ asset('images/social/rofiq-tour-preview.jpg') }}">
 <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 @vite(['resources/css/site.css', 'resources/js/site.js'])
 </head>
