@@ -1,0 +1,73 @@
+{
+  "resources/css/admin.css": {
+    "file": "assets/admin-hSZw40aU.css",
+    "name": "admin",
+    "names": [
+      "admin.css"
+    ],
+    "src": "resources/css/admin.css",
+    "isEntry": true
+  },
+  "resources/css/site.css": {
+    "file": "assets/site-D6ZDS4TB.css",
+    "name": "site",
+    "names": [
+      "site.css"
+    ],
+    "src": "resources/css/site.css",
+    "isEntry": true,
+    "assets": [
+      "assets/font-1-CB7WfZ8W.ttf",
+      "assets/font-2-DCQhiIS7.ttf",
+      "assets/font-3-CYvJJk-g.ttf",
+      "assets/font-4-BQ0abr9c.ttf",
+      "assets/font-5-BEIO-tX3.ttf",
+      "assets/font-6-C3q1kWH5.ttf",
+      "assets/font-7-DBphNC1-.ttf",
+      "assets/font-8-DbNN7f-K.ttf",
+      "assets/font-9-CNT0ON31.ttf"
+    ]
+  },
+  "resources/fonts/font-1.ttf": {
+    "file": "assets/font-1-CB7WfZ8W.ttf",
+    "src": "resources/fonts/font-1.ttf"
+  },
+  "resources/fonts/font-2.ttf": {
+    "file": "assets/font-2-DCQhiIS7.ttf",
+    "src": "resources/fonts/font-2.ttf"
+  },
+  "resources/fonts/font-3.ttf": {
+    "file": "assets/font-3-CYvJJk-g.ttf",
+    "src": "resources/fonts/font-3.ttf"
+  },
+  "resources/fonts/font-4.ttf": {
+    "file": "assets/font-4-BQ0abr9c.ttf",
+    "src": "resources/fonts/font-4.ttf"
+  },
+  "resources/fonts/font-5.ttf": {
+    "file": "assets/font-5-BEIO-tX3.ttf",
+    "src": "resources/fonts/font-5.ttf"
+  },
+  "resources/fonts/font-6.ttf": {
+    "file": "assets/font-6-C3q1kWH5.ttf",
+    "src": "resources/fonts/font-6.ttf"
+  },
+  "resources/fonts/font-7.ttf": {
+    "file": "assets/font-7-DBphNC1-.ttf",
+    "src": "resources/fonts/font-7.ttf"
+  },
+  "resources/fonts/font-8.ttf": {
+    "file": "assets/font-8-DbNN7f-K.ttf",
+    "src": "resources/fonts/font-8.ttf"
+  },
+  "resources/fonts/font-9.ttf": {
+    "file": "assets/font-9-CNT0ON31.ttf",
+    "src": "resources/fonts/font-9.ttf"
+  },
+  "resources/js/site.js": {
+    "file": "assets/site-BhFKHgz6.js",
+    "name": "site",
+    "src": "resources/js/site.js",
+    "isEntry": true
+  }
+}
