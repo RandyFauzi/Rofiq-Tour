@@ -1,0 +1,7 @@
+@extends('layouts.site')
+@section('title','Galeri Perjalanan — Rofiq Tour')
+@section('content')
+<section class="page-hero"><div class="container"><span class="eyebrow">GALERI PERJALANAN</span><h1>Tempat yang indah.<br><em>Makna yang lebih dalam.</em></h1><p>Inspirasi destinasi untuk perjalanan Anda berikutnya.</p></div></section>
+<section class="section pt-small"><div class="container"><div class="filter-chips"><a class="{{ !request('destination')?'active':'' }}" href="{{ route('gallery') }}">Semua destinasi</a>@foreach($destinations as $destination)<a class="{{ request('destination')==$destination->id?'active':'' }}" href="{{ route('gallery',['destination'=>$destination->id]) }}">{{ $destination->name }}</a>@endforeach</div><div class="gallery-grid">@forelse($photos as $photo)<button class="gallery-item" data-lightbox="{{ \App\Support\Media::url($photo->image_path) }}" data-caption="{{ $photo->title }}" aria-label="Perbesar foto: {{ $photo->title }}"><img src="{{ \App\Support\Media::url($photo->image_path) }}" alt="{{ $photo->title }}" width="800" height="640" loading="lazy"><span>{{ $photo->title }} <x-icon name="arrow"/></span></button>@empty<div class="empty-state">Galeri destinasi ini akan segera hadir.</div>@endforelse</div>{{ $photos->links() }}<p class="footnote">Foto destinasi sebagai ilustrasi perjalanan.</p></div></section>
+<dialog class="lightbox" id="lightbox"><button type="button" class="lightbox-close" aria-label="Tutup foto"><x-icon name="close"/></button><img alt=""><p></p></dialog>
+@endsection

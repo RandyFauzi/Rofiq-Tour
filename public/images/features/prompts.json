@@ -1,0 +1,18 @@
+{
+  "tool": "Built-in imagegen",
+  "kind": "AI-generated illustrative assets",
+  "assets": [
+    {
+      "file": "manasik.webp",
+      "prompt": "Use case: photorealistic-natural. Generate a single realistic wide landscape photograph, 3:2 ratio, for an Indonesian umrah travel website facility banner. A warm elegant convention room hosting a modest umrah preparation class: adult Indonesian Muslim pilgrims seated, men in white clothing and women in modest hijab, knowledgeable male guide near a simple stage demonstrating rituals with a small simplified Kaaba teaching model. Documentary view from the rear side of the hall, professional but intimate, realistic people, natural proportions. Warm neutral cream and muted gold palette, soft lighting. Leave left third visually quiet and dark enough for HTML text overlay. No brand, no readable text, no logos, no watermarks. It is an illustrative imagined scene, not a real event."
+    },
+    {
+      "file": "hotel.webp",
+      "prompt": "Use case: photorealistic-natural. Generate a single realistic wide landscape photograph, 3:2 ratio, for an umrah travel website facility banner. An inviting premium hotel room in Makkah with two tidy single beds, clean white linens, warm beige and bronze interiors, subtle modern Arabic detailing, large window revealing the real recognizable Abraj al-Bait clock tower and a distant hint of Masjid al-Haram. No identifiable hotel brand. Warm early-evening light, excellent natural interior photograph, simple uncluttered composition. Keep left third subtly darker and visually quiet for an HTML text overlay. No text, logo, watermark, guests, or implausible geometry. Illustrative accommodation scene, not a promise of a particular hotel."
+    },
+    {
+      "file": "social.webp",
+      "prompt": "Use case: product-mockup. Asset type: transparent promotional image for a travel website social media section. Generate an elegant realistic 3D photographic composition of TWO modern smartphones with black slim metal frames, one upright on the RIGHT, and a second on the LEFT rotated about 18 degrees counterclockwise leaning behind it. Both show tastefully simplified Instagram/TikTok-style travel profile screens for ROFIQ TOUR, using the provided reference logo as the actual brand logo. Reference image is brand identity only, not an edit target. Feed thumbnails depict Kaaba, Masjid Nabawi, pilgrims in white ihram and inspirational umrah trips. Only readable short title 'Rofiq Tour'; otherwise tasteful minimal UI lines and simple profile controls. Do not show fabricated follower numbers, likes numbers, username handles or verification checkmarks. Keep phones fully inside the image with a generous 8% margin and complete bottom edges. Include a soft muted gold oval decoration behind the phones and three translucent glass bubbles floating around them; largest bubble at lower left contains a subtle glimpse of the Kaaba, small bubble by right phone green dome of Madinah. Delicate realistic ground contact shadow, refined cream/gold highlights, premium lighting, same spatial layout as a luxury travel social-media website graphic. Isolated composition on genuine transparent background. No background rectangle, no extra text, no watermark. Output square around 1024 pixels; composition optimized to fit in left column of a two-column webpage."
+    }
+  ]
+}

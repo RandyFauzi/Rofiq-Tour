@@ -1,0 +1,273 @@
+/* Motion supplements; content remains visible if JavaScript is unavailable. */
+.public-site .btn svg,
+.public-site .text-link svg,
+.public-site .round-link svg,
+.public-site .nav-contact svg {
+    transition: transform 0.28s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.public-site .btn:hover svg,
+.public-site .text-link:hover svg,
+.public-site .round-link:hover svg,
+.public-site .nav-contact:hover svg {
+    transform: translate(2px, -2px);
+}
+.public-site .btn:active,
+.public-site .round-link:active {
+    transform: scale(0.97);
+}
+.public-site .benefit > span {
+    transition:
+        transform 0.35s,
+        background 0.35s,
+        box-shadow 0.35s;
+}
+.public-site .benefit:hover > span {
+    transform: rotate(-7deg) scale(1.08);
+    background: #f5e9d4;
+    box-shadow: 0 7px 20px #ab8a5120;
+}
+.public-site .step-number {
+    transition:
+        color 0.3s,
+        transform 0.3s;
+}
+.public-site .step:hover .step-number {
+    color: #b78d48;
+    transform: translateX(5px);
+}
+.public-site .article-card img,
+.public-site .gallery-item img,
+.public-site .why-photo img,
+.public-site .detail-cover {
+    transition:
+        filter 0.4s,
+        transform 0.5s;
+}
+.public-site .article-card:hover img,
+.public-site .gallery-item:hover img {
+    filter: saturate(1.08);
+    transform: translateY(-4px);
+}
+.public-site .office-card,
+.public-site .quote-card,
+.public-site .rate-schedule {
+    transition:
+        transform 0.35s,
+        box-shadow 0.35s,
+        border-color 0.35s;
+}
+.public-site .office-card:hover,
+.public-site .quote-card:hover,
+.public-site .rate-schedule:hover {
+    transform: translateY(-4px);
+    border-color: #d3bd95;
+    box-shadow: 0 14px 30px #8c745819;
+}
+.public-site input,
+.public-site select,
+.public-site textarea {
+    transition:
+        border-color 0.25s,
+        box-shadow 0.25s,
+        background 0.25s;
+}
+.public-site input:focus,
+.public-site select:focus,
+.public-site textarea:focus {
+    border-color: #ab8a51;
+    box-shadow: 0 0 0 3px #b4945812;
+    background: #fff;
+}
+.public-site .accordion details[open] > p,
+.public-site .itinerary details[open] > p {
+    animation: accordion-in 0.3s ease;
+}
+.public-site.motion-enabled .hero-note {
+    animation: gentle-float 8s ease-in-out infinite;
+}
+.public-site.motion-enabled .social-art > img {
+    animation: gentle-float 9s ease-in-out infinite;
+}
+.public-site.motion-enabled .hero-visual.is-offscreen .hero-note,
+.public-site.motion-enabled .social-art.is-offscreen > img {
+    animation-play-state: paused;
+}
+.public-site.motion-paused .hero-note,
+.public-site.motion-paused .social-art > img {
+    animation-play-state: paused;
+}
+@keyframes gentle-float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+@keyframes accordion-in {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .public-site *,
+    .public-site *:before,
+    .public-site *:after {
+        animation: none !important;
+        transition: none !important;
+    }
+    .public-site .btn:hover svg,
+    .public-site .text-link:hover svg,
+    .public-site .round-link:hover svg,
+    .public-site .nav-contact:hover svg,
+    .public-site .benefit:hover > span,
+    .public-site .step:hover .step-number,
+    .public-site .article-card:hover img,
+    .public-site .gallery-item:hover img,
+    .public-site .office-card:hover,
+    .public-site .quote-card:hover,
+    .public-site .rate-schedule:hover {
+        transform: none;
+    }
+}
+.public-site .site-header {
+    transition:
+        box-shadow 0.45s ease,
+        background 0.45s ease;
+}
+.public-site .site-header.is-scrolled {
+    box-shadow: 0 8px 35px #24382c12;
+    background: #faf8f3f5;
+}
+.public-site .package-card {
+    transition:
+        transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1),
+        box-shadow 0.45s ease;
+}
+.public-site .package-image img {
+    transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.public-site .floating-contact,
+.public-site .floating-instagram {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    z-index: 20;
+    color: #0e2016;
+    isolation: isolate;
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+.public-site .floating-contact {
+    background: #26d366;
+    box-shadow: 0 5px 25px #1ca94a35;
+}
+.public-site .floating-instagram {
+    bottom: 100px;
+    background: linear-gradient(35deg, #ffc857, #fc356d 50%, #a21dd4);
+    box-shadow: 0 5px 25px #dc307835;
+}
+.public-site .floating-contact > span {
+    display: none;
+}
+.public-site .floating-contact:before,
+.public-site .floating-instagram:before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border: 2px solid #27ce6759;
+    border-radius: 50%;
+    z-index: -1;
+    animation: contact-ring 3.2s ease-out infinite;
+}
+.public-site .floating-instagram:before {
+    border-color: #f2358159;
+    animation-delay: 1.1s;
+}
+.public-site .floating-contact:hover,
+.public-site .floating-instagram:hover {
+    transform: translateY(-4px) scale(1.06);
+}
+.public-site .floating-contact:after,
+.public-site .floating-instagram:after {
+    content: attr(aria-label);
+    position: absolute;
+    right: 72px;
+    top: 50%;
+    transform: translate(8px, -50%);
+    padding: 9px 13px;
+    border-radius: 8px;
+    background: #233c32;
+    color: white;
+    white-space: nowrap;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        opacity 0.3s,
+        transform 0.3s;
+}
+.public-site .floating-contact:hover:after,
+.public-site .floating-instagram:hover:after,
+.public-site .floating-contact:focus-visible:after,
+.public-site .floating-instagram:focus-visible:after {
+    opacity: 1;
+    transform: translate(0, -50%);
+}
+@keyframes contact-ring {
+    0% {
+        transform: scale(0.86);
+        opacity: 0.7;
+    }
+    70%,
+    100% {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+}
+@media (max-width: 540px) {
+    .public-site .floating-contact,
+    .public-site .floating-instagram {
+        width: 48px;
+        height: 48px;
+        right: 17px;
+        bottom: 18px;
+    }
+    .public-site .floating-instagram {
+        bottom: 82px;
+    }
+    .public-site .floating-contact:after,
+    .public-site .floating-instagram:after {
+        display: none;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .public-site .floating-contact:before,
+    .public-site .floating-instagram:before {
+        animation: none;
+        opacity: 0.4;
+    }
+    .public-site .floating-contact:hover,
+    .public-site .floating-instagram:hover {
+        transform: none;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .public-site .package-card:hover,
+    .public-site .package-card:hover .package-image img {
+        transform: none;
+    }
+}

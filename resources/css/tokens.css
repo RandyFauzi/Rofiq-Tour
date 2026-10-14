@@ -1,0 +1,17 @@
+:root {
+    --canvas: #faf8f3;
+    --paper: #fff;
+    --soft: #f1eee6;
+    --ink: #22362f;
+    --muted: #69736b;
+    --green: #203f36;
+    --green-hover: #2e5648;
+    --gold: #997444;
+    --gold-light: #dfc99e;
+    --line: #e3e5dc;
+    --radius: 14px;
+    --font: "DM Sans", sans-serif;
+    --display: "Manrope", sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+    --max: 1240px;
+}

@@ -1,0 +1,5 @@
+@props(['package'])
+<article class="package-card">
+<a class="package-image" href="{{ route('packages.show',$package) }}"><img src="{{ \App\Support\Media::url($package->image_path) }}" alt="Ilustrasi perjalanan umroh — {{ $package->name }}" width="720" height="560" loading="lazy"><span class="image-tag"><x-icon name="pin" :size="13"/> {{ $package->destination->name }}</span>@if($package->is_featured)<span class="featured-tag">Pilihan perjalanan</span>@endif</a>
+<div class="package-content"><div class="card-meta">UMROH PLUS @if($package->departures->first())<span>{{ $package->departures->first()->duration_days }} HARI</span>@endif</div><h3><a href="{{ route('packages.show',$package) }}">{{ $package->name }}</a></h3><p>{{ $package->summary }}</p><div class="card-bottom"><div><small>Mulai dari / jamaah</small><strong>{{ \App\Support\Money::rupiah($package->startingPrice()) }}</strong></div><a class="round-link" href="{{ route('packages.show',$package) }}" aria-label="Lihat {{ $package->name }}"><x-icon name="arrow"/></a></div></div>
+</article>

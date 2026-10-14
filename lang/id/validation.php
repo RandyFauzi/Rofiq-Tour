@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'required' => ':attribute wajib diisi.',
+    'accepted' => ':attribute harus disetujui.',
+    'email' => ':attribute harus berupa alamat email yang valid.',
+    'string' => ':attribute harus berupa teks.',
+    'integer' => ':attribute harus berupa angka bulat.',
+    'boolean' => ':attribute harus bernilai ya atau tidak.',
+    'unique' => ':attribute sudah digunakan.',
+    'exists' => ':attribute yang dipilih tidak tersedia.',
+    'date' => ':attribute harus berupa tanggal yang valid.',
+    'date_format' => ':attribute tidak sesuai format :format.',
+    'alpha_dash' => ':attribute hanya boleh berisi huruf, angka, tanda minus, dan garis bawah.',
+    'in' => ':attribute yang dipilih tidak valid.',
+    'regex' => ':attribute tidak sesuai format yang diperlukan.',
+    'image' => ':attribute harus berupa gambar.',
+    'mimes' => ':attribute harus berupa berkas dengan format :values.',
+    'dimensions' => 'Ukuran :attribute tidak sesuai batas gambar.',
+    'url' => ':attribute harus berupa tautan yang valid.',
+    'confirmed' => 'Konfirmasi :attribute tidak sesuai.',
+    'current_password' => 'Kata sandi saat ini tidak sesuai.',
+    'max' => ['string' => ':attribute maksimal :max karakter.', 'numeric' => ':attribute maksimal :max.', 'file' => ':attribute maksimal :max KB.'],
+    'min' => ['string' => ':attribute minimal :min karakter.', 'numeric' => ':attribute minimal :min.'],
+    'lte' => ['numeric' => ':attribute tidak boleh lebih besar dari :value.'],
+    'password' => ['mixed' => ':attribute harus mengandung huruf besar dan kecil.', 'numbers' => ':attribute harus mengandung angka.'],
+    'attributes' => ['name' => 'Nama', 'phone' => 'Nomor WhatsApp', 'travelers' => 'Jumlah jamaah', 'message' => 'Pesan', 'consent' => 'Persetujuan', 'current_password' => 'Kata sandi saat ini', 'password' => 'Kata sandi', 'month' => 'Bulan keberangkatan', 'q' => 'Pencarian'],
+];

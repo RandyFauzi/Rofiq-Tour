@@ -1,0 +1,33 @@
+{
+  "source": "https://payungmadinah.id/",
+  "assets": [
+    {
+      "file": "saudia.webp",
+      "url": "https://payungmadinah.id/images/microsites/paket-umroh/maskapai-saudia.webp"
+    },
+    {
+      "file": "qatar.webp",
+      "url": "https://payungmadinah.id/images/microsites/paket-umroh/maskapai-qatar.webp"
+    },
+    {
+      "file": "turkish.webp",
+      "url": "https://payungmadinah.id/images/microsites/paket-umroh/maskapai-turkish.webp"
+    },
+    {
+      "file": "oman.webp",
+      "url": "https://payungmadinah.id/images/microsites/paket-umroh/maskapai-oman.webp"
+    },
+    {
+      "file": "emirates.webp",
+      "url": "https://payungmadinah.id/images/microsites/paket-umroh/maskapai-emirates.webp"
+    },
+    {
+      "file": "etihad.webp",
+      "url": "https://payungmadinah.id/images/microsites/paket-umroh/maskapai-etihad.webp"
+    },
+    {
+      "file": "garuda.webp",
+      "url": "https://payungmadinah.id/images/microsites/paket-umroh/maskapai-garuda.webp"
+    }
+  ]
+}

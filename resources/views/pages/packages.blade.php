@@ -1,0 +1,10 @@
+@extends('layouts.site')
+@section('title','Program Umroh — Rofiq Tour')
+@section('content')
+<section class="page-hero"><div class="container"><span class="eyebrow">PILIHAN PERJALANAN</span><h1>Temukan perjalanan<br><em>yang memanggil hati.</em></h1><p>Kenali program, pilih waktunya, dan rencanakan perjalanan bersama kami.</p></div></section>
+<section class="section pt-small"><div class="container">
+<form method="GET" class="filter-bar" action="{{ route('packages.index') }}"><div><label for="q">Cari program</label><input id="q" name="q" placeholder="Nama atau tujuan perjalanan" value="{{ request('q') }}"></div><div><label for="destination">Destinasi</label><select id="destination" name="destination"><option value="">Semua destinasi</option>@foreach($destinations as $destination)<option value="{{ $destination->slug }}" @selected(request('destination')===$destination->slug)>{{ $destination->name }}</option>@endforeach</select></div><div><label for="month">Keberangkatan</label><select id="month" name="month"><option value="">Semua bulan</option>@foreach($months as $month)<option value="{{ $month }}" @selected(request('month')===$month)>{{ \Carbon\Carbon::parse($month.'-01')->translatedFormat('F Y') }}</option>@endforeach</select></div><button class="btn btn-primary">Cari perjalanan <x-icon name="arrow" :size="17"/></button></form>
+<div class="results-header"><span>{{ $packages->total() }} program untuk Anda</span><a href="{{ route('packages.index') }}">Reset filter</a></div>
+<div class="package-grid catalog-grid">@forelse($packages as $package)<x-package-card :package="$package"/>@empty<div class="empty-state"><x-icon name="compass" :size="40"/><h2>Belum ada program yang sesuai.</h2><p>Coba tujuan atau bulan lain, atau konsultasikan rencana Anda.</p><a class="btn btn-primary" href="{{ route('consultation') }}">Minta rekomendasi</a></div>@endforelse</div>
+{{ $packages->links() }}<p class="footnote">Jadwal dan harga pada pratinjau ini adalah contoh program. Konfirmasi penawaran resmi dengan admin sebelum mendaftar.</p></div></section>
+@endsection

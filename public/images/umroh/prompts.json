@@ -1,0 +1,22 @@
+{
+  "tool": "Built-in imagegen",
+  "kind": "AI-generated illustration",
+  "assets": [
+    {
+      "file": "makkah-ihram.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: a premium Indonesian umrah travel website package-card photograph. Generate a single realistic landscape photograph in 3:2 aspect ratio, no collage, no text, no logos, no watermark. Warm natural light, soft cream marble and muted gold tones, truthful recognizable architecture, calm respectful documentary composition. Keep the central subjects readable when cropped to a landscape card. Not a testimonial or a branded tour-group photograph. Makkah, Masjid al-Haram courtyard, clearly recognizable Kaaba in middle background. A small group of adult Indonesian Muslim men wearing correct white two-piece ihram cloth, both shoulders covered while walking calmly, seen from behind and three-quarter rear angles in foreground. The black Kaaba with gold embroidered band is clearly visible above the people. Realistic other pilgrims in distance, beautiful morning daylight, anatomically correct natural people."
+    },
+    {
+      "file": "madinah-nabawi.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: a premium Indonesian umrah travel website package-card photograph. Generate a single realistic landscape photograph in 3:2 aspect ratio, no collage, no text, no logos, no watermark. Warm natural light, soft cream marble and muted gold tones, truthful recognizable architecture, calm respectful documentary composition. Keep the central subjects readable when cropped to a landscape card. Not a testimonial or a branded tour-group photograph. Madinah, Masjid an-Nabawi courtyard, recognizable green dome and slender minarets with giant courtyard shade umbrellas. Adult Indonesian pilgrims walking quietly, men in clean white modest thobes, women in modest light cream hijabs and full-length loose clothes. Respectful serene travel documentary photo, soft morning light. Use white thobes here rather than depicting ihram as obligatory in Madinah."
+    },
+    {
+      "file": "makkah-pilgrims.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: a premium Indonesian umrah travel website package-card photograph. Generate a single realistic landscape photograph in 3:2 aspect ratio, no collage, no text, no logos, no watermark. Warm natural light, soft cream marble and muted gold tones, truthful recognizable architecture, calm respectful documentary composition. Keep the central subjects readable when cropped to a landscape card. Not a testimonial or a branded tour-group photograph. Makkah, pilgrims walking in Masjid al-Haram, famous Kaaba clearly visible at moderate distance, wide view with pale marble. Foreground two adult Muslim men in correctly wrapped white two-piece ihram, natural folds, no exposed inappropriate body parts, rear view, gently walking with an older fellow pilgrim. Golden late-afternoon light, realistic crowd, clear scene of umrah."
+    },
+    {
+      "file": "madinah-courtyard.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: a premium Indonesian umrah travel website package-card photograph. Generate a single realistic landscape photograph in 3:2 aspect ratio, no collage, no text, no logos, no watermark. Warm natural light, soft cream marble and muted gold tones, truthful recognizable architecture, calm respectful documentary composition. Keep the central subjects readable when cropped to a landscape card. Not a testimonial or a branded tour-group photograph. Madinah, an expansive view across Masjid an-Nabawi courtyard, green dome visible in background among minarets, tall folded or open courtyard umbrellas with correct giant Islamic geometric shade designs. A few adult men and women pilgrims in modest white and cream clothing walk in the foreground and center, authentic calm atmosphere, warm sunset light, balanced photographic framing."
+    }
+  ]
+}
