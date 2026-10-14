@@ -5,6 +5,13 @@
 
     RewriteEngine On
 
+    # Never serve hidden configuration files or private database backups.
+    RewriteRule (^|/)\.(?!well-known(?:/|$)) - [F,L]
+
+    <FilesMatch "(?i)\.(?:env|sql|sqlite|sqlite3|log|bak|key|pem)$">
+        Require all denied
+    </FilesMatch>
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -22,4 +29,9 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>

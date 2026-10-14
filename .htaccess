@@ -1,0 +1,17 @@
+# Prefer a document root pointing to public/. This fallback supports shared hosting.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Keep framework source, private data, and development files inaccessible.
+    RewriteRule ^(?:app|bootstrap|config|database|docs|lang|node_modules|resources|routes|storage|tests|vendor)(?:/|$) - [F,L,NC]
+    RewriteRule (^|/)\.(?!well-known(?:/|$)) - [F,L]
+    RewriteRule ^(?:artisan|composer\.(?:json|lock)|package(?:-lock)?\.json|phpunit\.xml|vite\.config\.js|boost\.json|AGENTS\.md|CLAUDE\.md|README\.md|LOCAL_ACCESS\.txt)$ - [F,L,NC]
+
+    # Avoid repeatedly prefixing requests handled by public/.htaccess.
+    RewriteRule ^public(?:/|$) - [L]
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>

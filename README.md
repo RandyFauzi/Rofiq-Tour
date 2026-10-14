@@ -220,6 +220,25 @@ Cakupan: halaman publik/admin, publikasi, filter, jadwal lampau, pencarian FAQ, 
 7. Pastikan storage/ dan bootstrap/cache/ dapat ditulis. Jangan mengunggah LOCAL_ACCESS.txt.
 8. Periksa nomor kontak, data paket, gambar, kebijakan, dan informasi legalitas yang benar sebelum publikasi.
 
+### Hosting Apache / LiteSpeed
+
+Utamakan document root ke folder `public/`. Jika shared hosting hanya menyediakan `public_html`, `.htaccess` root meneruskan request ke `public/` dan menolak akses langsung ke source, konfigurasi tersembunyi, database, serta kredensial lokal. `.htaccess` di `public/` menangani routing Laravel dan header dasar. Kedua file harus ikut diunggah; aktifkan tampilan hidden files pada file manager.
+
+Setelah clone/upload, buat `.env` di root aplikasi dengan kredensial production sendiri, lalu jalankan:
+
+```sh
+composer install --no-dev --optimize-autoloader
+npm ci
+npm run build
+php artisan migrate --force
+php artisan db:seed --force
+php artisan storage:link
+php artisan rofiq:admin admin@example.com
+php artisan optimize
+```
+
+Jika hosting tidak menyediakan Node.js, jalankan build pada komputer lokal dan unggah `public/build/`. Jangan unggah `public/hot`. Jangan mengganti `APP_KEY` pada aplikasi yang sudah berjalan karena sesi dan data terenkripsi memakai key tersebut. Gunakan `QUEUE_CONNECTION=sync` bila belum menyediakan worker. Pastikan SSL aktif sebelum mengaktifkan secure session cookie.
+
 Laravel Boost dipasang sebagai dependensi development sesuai panduan skeleton Laravel. Tidak dibutuhkan untuk melayani website production.
 
 ## Aset dan riset
