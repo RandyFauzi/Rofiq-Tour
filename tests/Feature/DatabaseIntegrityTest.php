@@ -46,4 +46,21 @@ class DatabaseIntegrityTest extends TestCase
         $this->seed();
         $this->assertSame($count, Departure::count());
     }
+
+    public function test_constraints_migration_can_resume_without_duplicate_constraints(): void
+    {
+        $migration = require database_path('migrations/2026_10_14_141155_enforce_travel_constraints.php');
+        $migration->up();
+        $migration->up();
+
+        $this->assertSame(1, DB::table('site_settings')->count());
+        $this->expectException(QueryException::class);
+        DB::table('departures')->where('id', Departure::first()->id)->update(['available_seats' => 999]);
+    }
+
+    public function test_database_rejects_a_second_settings_identity(): void
+    {
+        $this->expectException(QueryException::class);
+        DB::table('site_settings')->insert(['id' => 2, 'brand_name' => 'Invalid second settings']);
+    }
 }

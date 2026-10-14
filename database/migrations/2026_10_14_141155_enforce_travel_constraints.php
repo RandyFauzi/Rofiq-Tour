@@ -30,10 +30,15 @@ return new class extends Migration
                     $newCondition = preg_replace('/\\b(capacity|available_seats|duration_days|deposit_amount|status|price|tier|room_type|stars|distance_meters|type|travelers|id)\\b/', 'NEW.$1', $condition);
                     foreach (['INSERT', 'UPDATE'] as $event) {
                         $trigger = $table.'_'.$name.'_'.strtolower($event);
-                        DB::unprepared("CREATE TRIGGER {$trigger} BEFORE {$event} ON {$table} WHEN NOT ({$newCondition}) BEGIN SELECT RAISE(ABORT, 'Travel data constraint violated'); END");
+                        DB::unprepared("CREATE TRIGGER IF NOT EXISTS {$trigger} BEFORE {$event} ON {$table} WHEN NOT ({$newCondition}) BEGIN SELECT RAISE(ABORT, 'Travel data constraint violated'); END");
                     }
                 } elseif (DB::getDriverName() === 'mysql') {
-                    DB::statement("ALTER TABLE {$table} ADD CONSTRAINT {$table}_{$name} CHECK ({$condition})");
+                    if ($table === 'site_settings') {
+                        DB::statement('ALTER TABLE site_settings MODIFY COLUMN id BIGINT UNSIGNED NOT NULL DEFAULT 1');
+                    }
+                    if (! $this->mysqlCheckExists($table, $name)) {
+                        DB::statement("ALTER TABLE {$table} ADD CONSTRAINT {$table}_{$name} CHECK ({$condition})");
+                    }
                 }
             }
         }
@@ -48,9 +53,26 @@ return new class extends Migration
                         DB::unprepared("DROP TRIGGER IF EXISTS {$table}_{$name}_{$event}");
                     }
                 } elseif (DB::getDriverName() === 'mysql') {
-                    DB::statement("ALTER TABLE {$table} DROP CHECK {$table}_{$name}");
+                    if ($this->mysqlCheckExists($table, $name)) {
+                        $version = DB::selectOne('SELECT VERSION() AS version')->version;
+                        $clause = str_contains(strtolower($version), 'mariadb') ? 'DROP CONSTRAINT' : 'DROP CHECK';
+                        DB::statement("ALTER TABLE {$table} {$clause} {$table}_{$name}");
+                    }
+                    if ($table === 'site_settings') {
+                        DB::statement('ALTER TABLE site_settings MODIFY COLUMN id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT');
+                    }
                 }
             }
         }
+    }
+
+    private function mysqlCheckExists(string $table, string $name): bool
+    {
+        return DB::table('information_schema.TABLE_CONSTRAINTS')
+            ->where('CONSTRAINT_SCHEMA', DB::connection()->getDatabaseName())
+            ->where('TABLE_NAME', $table)
+            ->where('CONSTRAINT_NAME', $table.'_'.$name)
+            ->where('CONSTRAINT_TYPE', 'CHECK')
+            ->exists();
     }
 };
